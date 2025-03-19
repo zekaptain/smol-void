@@ -7,20 +7,45 @@
 			{{ with .Content }}<div>{{ . }}</div>{{ end }}
 		</div>
 		{{ end }}
-		
-		<ul>
-		    {{ range .Paginator.Pages }}
-		    <li>
-		        <div class="post-title">
-				{{ if eq $listtitle "Posts" }}
-				    {{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{.Title }}</a>
-				{{ else }}
-				    <a href="{{ .RelPermalink }}">{{.Title }}</a>
-				{{ end }}
-		        </div>
-		    </li>
-		    {{ end }}
-		</ul>
-		{{ partial "pagination.html" . }}
+		<div class="container" style="width: 100%; white-space:nowrap;">
+			<div style="width: auto; float:left;">
+				<ul>
+					{{ range .Paginator.Pages }}
+					<li>
+						<div class="post-title">
+							{{ if eq $listtitle "posts" }}
+								{{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{.Title }}</a>
+							{{ else }}
+								<a href="{{ .RelPermalink }}">{{.Title }}</a>
+							{{ end }}
+						</div>
+					</li>
+					{{ end }}
+				</ul>
+				{{ partial "pagination.html" . }}
+			</div>
+			<div style="margin-left:101px; display:inline-block;">
+					<figure role="img" aria-labelledby="ascii-ghost"> 
+						<div class="ascii-art" aria-hidden="true">
+      ████████
+     █▓      ▓█
+    █▓        ▓█
+   █   ▒█  ▒█   █
+   █   █▒  █▒   █
+   █            █
+   ▓▓          ▓▓
+   ▒▓░        ░▓▒
+   ▒▓▒░ ▓░ ▓░ ▒▓▒
+   ░▒▒▒▓ ▒▓ ▒▓▒▒░
+   ░▒░ ▒░ ▒░ ▒░
+     ░  ░  ░  ░
+						</div>
+						<figcaption id="ascii-ghost" style="float:left;">
+							ASCII art of a ghost.
+						</figcaption>
+						</figure>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
 	</main>
 {{ end }}

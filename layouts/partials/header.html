@@ -1,11 +1,28 @@
 <header>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-	== <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ==<br>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
+	<figure role="img" aria-labelledby="ascii-caption"> 
+	<div class="ascii-art" aria-hidden="true">
+  █     █░ ▒█████   ██▀███  ▓█████▄  ██▒   █▓ ▒█████   ██▓▓█████▄ 
+ ▓█░ █ ░█░▒██▒  ██▒▓██ ▒ ██▒▒██▀ ██▌▓██░   █▒▒██▒  ██▒▓██▒▒██▀ ██▌
+ ▒█░ █ ░█ ▒██░  ██▒▓██ ░▄█ ▒░██   █▌ ▓██  █▒░▒██░  ██▒▒██▒░██   █▌
+ ░█░ █ ░█ ▒██   ██░▒██▀▀█▄  ░▓█▄   ▌  ▒██ █░░▒██   ██░░██░░▓█▄   ▌
+ ░░██▒██▓ ░ ████▓▒░░██▓ ▒██▒░▒████▓    ▒▀█░  ░ ████▓▒░░██░░▒████▓ 
+ ░ ▓░▒ ▒  ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░ ▒▒▓  ▒    ░ ▐░  ░ ▒░▒░▒░ ░▓   ▒▒▓  ▒ 
+   ▒ ░ ░    ░ ▒ ▒░   ░▒ ░ ▒░ ░ ▒  ▒    ░ ░░    ░ ▒ ▒░  ▒ ░ ░ ▒  ▒ 
+   ░   ░  ░ ░ ░ ▒    ░░   ░  ░ ░  ░      ░░  ░ ░ ░ ▒   ▒ ░ ░ ░  ░ 
+     ░        ░ ░     ░        ░          ░      ░ ░   ░     ░    
+		             ░           ░                 ░      
+	</div>
+	<figcaption id="ascii-caption">
+		ASCII art that says the name of the blog: "wordvoid"
+	   </figcaption>
+	</figure>
+	{{ strings.Repeat ( .Site.Title | len | add 6 ) "░" }}<br>
+	▒▓ <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ▓▒<br>
+	{{ strings.Repeat ( .Site.Title | len | add 6 ) "░" }}
 	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
 	<p>
 	<nav>
-			<a href="/"><b>Start</b></a>.
+			<a href="/"><b>start</b></a>.
 			{{ with .Site.Menus.main }}
 			{{ range . }}
 			<a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.

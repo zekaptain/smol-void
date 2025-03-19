@@ -2,14 +2,18 @@
 	<main>
 		<article>
 			<h1>{{ .Title }}</h1>
+			<p class="byline">
+				<address class="author">by <a rel="author" href="/posts/">{{ .Params.author }} {{ .Params.authorEmoji }}</a></address> 
+			</p>
 			<b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
 		       {{ range .Params.tags }}
 		           <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
         	       {{ end }}
-
-			<div>
-				{{ .Content }}
-			</div>
+			{{- with .Content -}}
+				<div>
+					{{ . | replaceRE "(<h[1-6] id=\"(.+)\".*>)(.*)(</h[1-6]>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}${4}` | safeHTML }}
+				</div>
+    		{{- end -}}
 		</article>
 	</main>
 {{ partial "sidebar.html" . }}
