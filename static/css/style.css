@@ -115,5 +115,5 @@ footer aside {
 }
 div.ascii-art {
     font: 20px/1.0 monospace;
-    white-space: pre-line;
+    white-space: pre;
 }
