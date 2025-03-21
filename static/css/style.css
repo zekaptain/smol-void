@@ -88,12 +88,12 @@ pre{
     overflow-x: hidden;
     overflow-y: hidden;
 }
-pre > code {
+/* pre > code {
     color: var(--precolor);
     background: var(--prebgcolor);
     padding:24px;
     overflow-x: auto;
-}
+} */
 article{padding:24px 0}
 .center {
     display: block;
