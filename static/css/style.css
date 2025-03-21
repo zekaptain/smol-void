@@ -85,7 +85,8 @@ pre{
     /* color: var(--precolor);
     background: var(--prebgcolor); */
     /* padding:24px; */
-    overflow-x: hidden
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 article{padding:24px 0}
 .center {
