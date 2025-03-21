@@ -82,8 +82,8 @@ code{
     padding:2px
 }
 pre{
-    color: var(--precolor);
-    background: var(--prebgcolor);
+    /* color: var(--precolor);
+    background: var(--prebgcolor); */
     padding:24px;
     overflow-x: auto
 }
@@ -113,7 +113,7 @@ img {
 footer aside {
     float: left;
 }
-div.ascii-art {
+.ascii-art {
     font: 20px/1.0 monospace;
     /* white-space: pre; */
 }
