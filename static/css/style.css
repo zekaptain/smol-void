@@ -128,11 +128,11 @@ footer aside {
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: #fbf1c7;
-  background-color: #282828;
+  background-color: var(--prebgcolor);;
 }
 .highlight .err {
   color: #fb4934;
-  background-color: #282828;
+  background-color: var(--prebgcolor);;
   font-weight: bold;
 }
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
@@ -153,11 +153,11 @@ footer aside {
 }
 .highlight .gi {
   color: #b8bb26;
-  background-color: #282828;
+  background-color: var(--prebgcolor);;
 }
 .highlight .gd {
   color: #fb4934;
-  background-color: #282828;
+  background-color: var(--prebgcolor);;
 }
 .highlight .gh {
   color: #b8bb26;
