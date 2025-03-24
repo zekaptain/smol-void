@@ -77,8 +77,8 @@ p > code{
     padding:2px
 }
 code{
-    color: var(--precolor);
-    background: var(--prebgcolor);
+    /* color: var(--precolor);
+    background: var(--prebgcolor); */
     padding:2px
 }
 pre{
